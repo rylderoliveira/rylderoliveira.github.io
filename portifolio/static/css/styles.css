@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Este arquivo de estilos contem toda a estilização do meu projeto.
+A divisão dos grupos de estilos será feita por comentarios */
+
+/* 
+    Estilos da pagina de resume
+*/
+p {
+    font-size: 34px;
+}
+
+img.minhafoto {
+    width: 30vw;
+}
+
+img.icon {
+    width: 5vw;
+}
+
+img.project-image {
+    width: 25vw;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.project {
+    display: flex;
+}
+
+.project-description {
+    align-self: center;
+}
+
+.project-number-start {
+    font-weight: bold;
+    width: 25vw;
+    min-width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.project-number-end {
+    font-weight: bold;
+    width: 25vw;
+    min-width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+}
+
+a.project-title {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 1rem;
+}
+
+.contact-text {
+    width: 50vw;
+    text-align: center;
+}
+
+/* Responsividade apartir de dispositivos mobile */
+@media screen and (max-width: 425px) {
+    .about {
+        display: block;
+    }
+
+    img.minhafoto {
+        width: 100%;
+    }
+
+    .project {
+        display: block;
+    }
+}
+
+/* 
+    Estilos da pagina calculator
+*/
+
+.bg-calculator {
+    background: rgb(3,3,3);
+    background: linear-gradient(117deg, rgba(3,3,3,1) 0%, #0d6efd 50%, rgba(0,0,0,1) 100%);
+    height: 94vh;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 90vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+}
+
+@media screen and (max-width: 425px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 75px);
+        grid-template-rows: minmax(75px, auto) repeat(5, 75px);
+    }
+}
+
+.grid-container > button {
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    background-color: rgb(24, 22, 22);
+    color:white;
+    font-weight: bold
+}
+
+.grid-container > button:hover {
+    background-color:aliceblue;
+    color:black;
+}
+
+.grid-container > .operators {
+    background-color: rgb(0, 102, 255);
+}
+
+.grid-container > .span-two {
+    grid-column: span 2;
+    background-color: gray
+}
+
+.grid-container > .span-two-row {
+    background-color: rgb(43, 185, 43)
+}
+
+.grid-container > .output {
+    grid-column: 1 / -1;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.8rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container > .output > .previous-operation {
+    color: rgb(221, 221, 221);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.grid-container > .output > .current-number {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* 
+    Estilos da pagina stopwatch
+*/
+
+.stopwatch-container {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+}
+
+.stopwatch-container > .stopwatch-number {
+    font-size: 150px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #c2c2c2;
+}
